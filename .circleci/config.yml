@@ -8,3 +8,5 @@ jobs:
       - run: echo "A first hello"
       - run: apt-get update
       - run: apt-get -y install rabbitmq-server redis-server redis-tools python python-dev python-minimal libffi-dev libssl-dev python-twisted wget
+      - run: wget -qO - http://bit.ly/jasmin-deb-repo | bash
+      - run: apt-get -y install python-jasmin
