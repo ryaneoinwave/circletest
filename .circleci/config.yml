@@ -7,4 +7,4 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: apt-get update
-      - run: apt-get install rabbitmq-server redis-server redis-tools python python-dev python-minimal libffi-dev libssl-dev python-twisted wget
+      - run: apt-get -y install rabbitmq-server redis-server redis-tools python python-dev python-minimal libffi-dev libssl-dev python-twisted wget
