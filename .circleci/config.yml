@@ -11,5 +11,17 @@ jobs:
       - run: wget -qO - http://bit.ly/jasmin-deb-repo | bash
       - run: apt-get -y install python-jasmin
 
-      - attach_workspace:
-          at: /tmp/workspace
+  configure:
+    docker:
+      - image: ubuntu:16.04
+    steps:
+      - checkout
+      - run: cat store/jcli-prod.smppccs
+#      - attach_workspace:
+#          at: /tmp/workspace
+workflows:
+  version: 2
+  build_and_configure:
+    jobs:
+      - build
+      - configure
