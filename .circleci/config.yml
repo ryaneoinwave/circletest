@@ -16,7 +16,7 @@ jobs:
       - image: ubuntu:16.04
     steps:
       - checkout
-      -run: ls /etc/jasmin/
+      - run: ls /etc/jasmin/
 #      - run: rm -f /etc/jasmin/store/*
 #      - run: mkdir /etc/jasmin/store
 #      - run: cp store/* /etc/jasmin/store/
