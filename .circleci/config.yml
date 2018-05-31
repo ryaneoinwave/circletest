@@ -17,6 +17,7 @@ jobs:
     steps:
       - checkout
       - run: rm -f /etc/jasmin/store/*
+      - run: mkdir /etc/jasmin/store
       - run: cp store/* /etc/jasmin/store/
       - run: cat /etc/jasmin/store/jcli-prod.smppccs
 #      - attach_workspace:
